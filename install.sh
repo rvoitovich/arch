@@ -12,7 +12,7 @@ password="password"
 
 devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac)
 
-echo devicelist
+lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac
 echo -n "Select installation disk: "
 read -s device
 
